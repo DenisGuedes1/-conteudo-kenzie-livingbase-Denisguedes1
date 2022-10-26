@@ -1,1 +1,131 @@
 /* Desenvolva seu estilo aqui */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800&display=swap");
+:root {
+  --color-100: #212529;
+  --color-200: #495057;
+  --color-300: #808387;
+  --color-400: #dee2e6;
+  --color-500: #e9ecef;
+  --color-600: #f1f3f5;
+  --color-700: #f8f9fa;
+  --color-brand-100: #087f5b;
+  --color-brand-200: #099268;
+  --font: "Inter", sans-serif;
+}
+ul {
+  list-style: none;
+}
+
+.cabecalho {
+  display: flex;
+  gap: 8rem;
+  margin-top: 5rem;
+  padding: 2rem;
+}
+.figureCabecalho {
+  display: flex;
+}
+.title {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  margin-left: 1rem;
+}
+
+.text {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--color-100);
+}
+.color_green {
+  color: var(--color-brand-100);
+}
+.text_rod {
+  font-family: var(--font);
+  font-size: 19px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-100);
+}
+.primaryLaterar {
+  width: 32rem;
+}
+.tagAncora {
+  text-decoration: none;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-100);
+}
+.navBar {
+  width: 56rem;
+  display: flex;
+  gap: 5rem;
+}
+#all {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-100);
+  background-color: var(--color-400);
+  border-color: var(--color-400);
+  border: none;
+  border-radius: 32px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  width: 109px;
+  height: 38px;
+}
+#all:hover {
+  background-color: var(--color-brand-100);
+  color: var(--color-600);
+}
+.conteinerLi {
+  width: 32rem;
+}
+.conteinerUl {
+  width: 32rem;
+}
+.imgPost {
+  height: 172px;
+  width: 500px;
+}
+.tituloPost {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 30px;
+  color: var(--color-100);
+}
+.descricao {
+  font-family: var(--font);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--color-200);
+}
+.posts {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+}
+.btnAcses {
+  margin-top: 2rem;
+  width: 141px;
+  height: 24px;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  border: none;
+  color: var(--color-brand-200);
+  background-color: var(--color-700);
+  cursor: pointer;
+}
