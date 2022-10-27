@@ -1,16 +1,19 @@
 /* Desenvolva seu script aqui */
+import { observe } from "./observe.js";
+
 class api {
   static async requestApi() {
     const options = {
       method: "GET",
     };
+
     const response = await fetch(
       "https://m2-api-living.herokuapp.com/news",
       options
     )
       .then((resp) => resp.json())
       .then((resp) => {
-        console.log(resp);
+        // console.log(resp);
         return resp;
       })
       .catch((err) => console.log(err));
@@ -20,8 +23,12 @@ class api {
 
 async function renderAll() {
   const main = document.querySelector(".posts");
+  // observe.observe(main);
+  const divObserve = document.createElement("div");
+  divObserve.setAttribute("class", "observe");
+  const body = document.querySelector("body");
   const data = await api.requestApi();
-  console.log(data.news);
+
   data.news.forEach((dados) => {
     let ulTag = document.createElement("ul");
     ulTag.setAttribute("class", "conteinerUl");
@@ -38,6 +45,9 @@ async function renderAll() {
     btn.innerText = "Acessar conteúdo";
     btn.setAttribute("class", "btnAcses");
 
+    observe.observe(divObserve);
+    divObserve.innerText = "estou aqui ";
+
     img.src = dados.image;
     title.innerText = dados.title;
     description.innerText = dados.description;
@@ -45,9 +55,11 @@ async function renderAll() {
 
     li.append(img, title, description, btn);
     ulTag.appendChild(li);
-    main.appendChild(ulTag);
+    body.appendChild(divObserve);
+    main.append(ulTag);
   });
 }
+renderAll();
 
 function renderbtnTodos() {
   const btntdos = document.querySelector(".todos");
@@ -55,7 +67,27 @@ function renderbtnTodos() {
   main.innerHTML = "";
   btntdos.addEventListener("click", (e) => {
     console.log("hellow world");
-    renderAll();
+    // renderAll();
   });
 }
 renderbtnTodos();
+
+// export class apiObserve {
+//   static async request(currentpage) {
+//     const options = {
+//       method: "GET",
+//     };
+
+//     const response = await fetch(
+//       `https://m2-api-living.herokuapp.com/news/?page=${currentpage}`,
+//       options
+//     )
+//       .then((resp) => resp.json())
+//       .then((resp) => {
+//         console.log(resp);
+//         return resp;
+//       })
+//       .catch((err) => console.log(err));
+//     return response;
+//   }
+// }
