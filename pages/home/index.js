@@ -44,9 +44,16 @@ async function renderAll() {
     let btn = document.createElement("button");
     btn.innerText = "Acessar conteúdo";
     btn.setAttribute("class", "btnAcses");
+    //evento cruzar dados
+    btn.addEventListener("click", (e) => {
+      const postComId = document.getElementById(dados.id);
+      console.log(postComId);
+      localStorage.setItem("@post", JSON.stringify(dados));
+
+      window.location.replace("./pages/post/post.html");
+    });
 
     observe.observe(divObserve);
-    divObserve.innerText = "estou aqui ";
 
     img.src = dados.image;
     title.innerText = dados.title;
@@ -67,27 +74,13 @@ function renderbtnTodos() {
   main.innerHTML = "";
   btntdos.addEventListener("click", (e) => {
     console.log("hellow world");
-    // renderAll();
+    renderAll();
   });
 }
 renderbtnTodos();
 
-// export class apiObserve {
-//   static async request(currentpage) {
-//     const options = {
-//       method: "GET",
-//     };
-
-//     const response = await fetch(
-//       `https://m2-api-living.herokuapp.com/news/?page=${currentpage}`,
-//       options
-//     )
-//       .then((resp) => resp.json())
-//       .then((resp) => {
-//         console.log(resp);
-//         return resp;
-//       })
-//       .catch((err) => console.log(err));
-//     return response;
-//   }
-// }
+const btnVoltarAotopo = document.querySelector(".btnVoiltarTopo");
+btnVoltarAotopo.addEventListener("click", (e) => {
+  e.preventDefault();
+  window.scrollTo(0, 1);
+});

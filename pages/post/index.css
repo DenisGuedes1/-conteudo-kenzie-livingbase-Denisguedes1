@@ -1,1 +1,105 @@
 /* Desenvolva seu estilo aqui */
+header {
+  display: flex;
+  gap: 5rem;
+  margin-top: 2rem;
+}
+.titlee {
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 28px;
+  color: var(--color-grey-100);
+}
+.logo {
+  margin: 0rem -4rem 0rem 4rem;
+}
+.voltar {
+  width: 70px;
+  height: 35px;
+  border-radius: 32px;
+  border: none;
+  margin-left: 57rem;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  cursor: pointer;
+}
+.tituloPost {
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 60px;
+  color: var(--color-grey-100);
+}
+.conteiner {
+  margin-left: 11rem;
+  margin-top: 3rem;
+  width: 48rem;
+}
+.descricaoPost {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-grey-200);
+}
+ul {
+  list-style: none;
+}
+.conteudoPost {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: var(--color-grey-200);
+}
+footer {
+  background-color: var(--color-grey-100);
+  width: 85rem;
+  height: 14rem;
+  margin-top: 5rem;
+}
+.footer {
+  display: flex;
+}
+.artigo {
+  width: 26rem;
+  margin: 4rem 0rem 0rem 14rem;
+}
+.tite {
+  margin: 56px 0rem 0rem -2rem;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 42px;
+  color: var(--color-grey-700);
+}
+.imagemFooter {
+  margin: 19px 2rem 0rem 5rem;
+}
+.btnVoiltarTopo {
+  width: 182px;
+  height: 38px;
+  border-radius: 32px;
+  border: none;
+  font-family: var(--font);
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  -webkit-border-radius: 32px;
+  -moz-border-radius: 32px;
+  -ms-border-radius: 32px;
+  -o-border-radius: 32px;
+  color: var(--color-grey-700);
+  margin: 4rem 0rem 0rem 6rem;
+  background-color: var(--color-grey-200);
+  cursor: pointer;
+}
+.articles {
+  font-family: var(--font);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  color: var(--color-grey-300);
+}

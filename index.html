@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./index.css" />
+    <link rel="stylesheet" href="./styles/globalStyles.css" />
+    <link rel="stylesheet" href="./pages/home/index.css" />
     <title>Living</title>
   </head>
   <header class="cabecalho">
     <div class="primaryLaterar">
       <figure class="figureCabecalho">
-        <img src="../../assets/img/Rectangle 4 (1).svg" alt="" />
+        <img src="./assets/img/Rectangle 4 (1).svg" alt="" />
         <p class="title">living!</p>
       </figure>
 
@@ -23,7 +24,7 @@
       <a class="tagAncora" href="">Consumir conteúdos</a>
     </div>
     <div class="secundaryLateral">
-      <img src="../../assets/Rectangle 2 (1).svg" alt="" />
+      <img src="./assets/Rectangle 2 (1).svg" alt="" />
     </div>
   </header>
   <body>
@@ -37,9 +38,38 @@
       <button id="all" class="reforma">Reforma</button>
       <button id="all" class="aromas">Aromas</button>
     </nav>
-    <main class="posts"></main>
-    <div class="observe"></div>
+
+    <main class="posts">
+      <p class="alert"></p>
+    </main>
+
+    <!-- <div class="observe"> -->
+    <div>
+      <footer>
+        <div class="footer">
+          <img
+            class="imagemFooter"
+            src="./assets/img/Rectangle 4 (1).svg"
+            alt=""
+          />
+
+          <p class="tite">Living</p>
+          <span class="artigo">
+            <article class="articles">
+              The passage experienced a surge in popularity during the 1960s
+              when Letraset used it on their dry-transfer sheets, and again
+              during the 90s as desktop publishers bundled the text with their
+              software.
+            </article>
+          </span>
+
+          <span class="btnFooter">
+            <button class="btnVoiltarTopo">Voltar ao topo</button>
+          </span>
+        </div>
+      </footer>
+    </div>
   </body>
-  <script type="module" src="./index.js"></script>
-  <script type="module" src="./observe.js"></script>
+  <script type="module" src="./pages/home/index.js"></script>
+  <script type="module" src="./pages/home/observe.js"></script>
 </html>
